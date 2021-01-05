@@ -1,9 +1,9 @@
 # DelveiBot
-Chat bots comunicate between who have lost someting and who found someting. Now, av
+Chat bots comunicate between who have lost someting and who found someting.
 
 ## Getting Started
-## Requires
-* Line develop account
+### Requires
+* Line developer account
 * ngrok (localhost)
 * Dialogflow
 * mongoDB
@@ -32,10 +32,13 @@ $ pip app.py
 ```
 * open ngrok ```ngrok.exe``` then run code below.
 ```shell
-$ ngrok http port 300
+$ ngrok http port 3000
 ```
 * copy url path and connect with line webhook. For example ```https://911f1c3208b9.ngrok.io```
 
 ## Results
 ![](doc/Results.png)
 ![](doc/delveibot_gif.gif)
+
+## Reference
+- Map from princess chulabhorn science high school mukdahan (my high school)
