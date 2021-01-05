@@ -1,9 +1,8 @@
 
 from config import *
-from linebot.models import ImagemapSendMessage
+from linebot.models import ImagemapSendMessage, BaseSize, MessageImagemapAction, ImagemapArea
 
 url = root_path + r"/get-image/imagemap.jpg"
-
 
 def getimagemap():
     return ImagemapSendMessage(
