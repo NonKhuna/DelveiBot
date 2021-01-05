@@ -170,11 +170,11 @@ def handle_message(event):
             if Response[0] == 'Map':
                 imagemap_message = getimagemap()
                 OP = Response[1]
-                OP.append("กรุณาติ๊กที่ตัวเลขบนภาพในตำแหน่งที่จะแจ้งครับ")
                 if type(OP) == str:
                     line_bot_api.reply_message(
                         event.reply_token,  [TextSendMessage(text=OP), imagemap_message])
                 if type(OP) == list:
+                    OP.append("กรุณาติ๊กที่ตัวเลขบนภาพในตำแหน่งที่จะแจ้งครับ")
                     if len(OP) == 1:
                         line_bot_api.reply_message(
                             event.reply_token, [TextSendMessage(text=OP[0]), imagemap_message])
@@ -270,6 +270,7 @@ def handle_message(event):
             if Response[0] == 'show':
                 temp = show_data(Response[1])
                 # print("in show")
+                #print(Response)
                 OP = Response[2]
                 template_message = Tmp_Confirm('แจ้งเลยใช่หรือไม่', [
                                                ['Yes', 'Lost_Money_Y', 'แจ้ง'], ['No', 'Lost_Money_N', 'ไม่แจ้ง']])
@@ -422,7 +423,7 @@ def IMAGE(event):
         ext = 'm4a'
     else:
         return
-        
+
     static_tmp_path = image_path
     message_content = line_bot_api.get_message_content(event.message.id)
     with tempfile.NamedTemporaryFile(dir=static_tmp_path, prefix=ext + '-', delete=False) as tf:
