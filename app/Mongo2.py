@@ -349,12 +349,12 @@ def MongoProcess(iput, UserId, cnt):
                     if check2 == 0:
                         data = db[dbFlow1].find(
                             {'item': item, "number": number, "state": 0})
-                        return ['show', data]
+                        return ['show', data,'!']
                     else:
                         data = db[dbFlow1].find(
                             {'item': item, "number": number, 'place': place, "state": 0})
                         # db[dbFlow1].update_one({"number":number,'place':place, "state" : 0},{ '$set' :{"state" : 1}})
-                        return ['show', data]
+                        return ['show', data,'!']
             else:
                 brand = iput['queryResult']['outputContexts'][da[0]
                                                               ]['parameters']['brand']
@@ -594,7 +594,7 @@ def MongoProcess(iput, UserId, cnt):
                 return [-2, '<in-instructive-other>', listItem]
     if intent == 'instructive-state8':
         return ['instructive-state8']
-        
+
     return iput
 
 
