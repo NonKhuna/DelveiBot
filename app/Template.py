@@ -15,8 +15,10 @@ from linebot.models import (
     SeparatorComponent, QuickReply, QuickReplyButton,ImageSendMessage
 )
 from config import *
-domainname=parturl
-linkurl=domainname+r'/get-image/'
+
+
+linkurl = root_path + r'/get-image/'
+
 def Tmp_Confirm(title,List_Op) :
     if len(List_Op) == 1 :
         buttons_template = ConfirmTemplate(

@@ -3,7 +3,7 @@ from config import *
 
 app = Flask(__name__)
 
-app.config["CLIENT_IMAGES"] = imagepart
+app.config["CLIENT_IMAGES"] = image_path
 
 # localhost/get-image/<image_name>
 @app.route("/get-image/<image_name>")
@@ -14,4 +14,4 @@ def get_image(image_name):
         abort(404)
 
 if __name__ == "__main__":
-    app.run(port=200)
+    app.run(port=80)

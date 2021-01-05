@@ -1,10 +1,11 @@
-from __init__ import *
-from linebot.models import MessageImagemapAction, ImagemapSendMessage
+from config import *
+from linebot.models import MessageImagemapAction, ImagemapSendMessage, BaseSize, ImagemapArea
 
-url = root_path + r"/get-image/Untitled-4.png"
+url = root_path + r"/get-image/color_circle.png"
 
 
 def getimagemapcolour():
+    print(url)
     return ImagemapSendMessage(
         base_url=url+r'?_ignore=',
         alt_text='this is an imagemap',

@@ -42,7 +42,7 @@ def cnt_context(session_id) :
     for i in client.list_contexts(parent):
         x+=1
     return x
-    
+
 def Send_Dialogflow(session_id, text, language_code):
     session_client = dialogflow_v2.SessionsClient()
     session = session_client.session_path(project_id, session_id)
