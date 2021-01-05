@@ -28,7 +28,7 @@ $ pip3 install -r requirements.txt
 ### How to run
 * ```cd app/``` then run code below.
 ```shell
-$ pip app.py 
+$ python app.py 
 ```
 * open ngrok ```ngrok.exe``` then run code below.
 ```shell
