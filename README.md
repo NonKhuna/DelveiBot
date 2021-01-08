@@ -7,6 +7,7 @@ Chat bots comunicate between who have lost someting and who found someting.
 * ngrok (localhost)
 * Dialogflow
 * mongoDB
+* Flask
 
 
 ### Install library
