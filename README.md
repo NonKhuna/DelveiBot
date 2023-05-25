@@ -1,5 +1,5 @@
 # DelveiBot
-Chat bots comunicate between who have lost someting and who found someting.
+A Chatbot allow communication between who have lost someting and who found someting.
 
 ## Getting Started
 ### Requires
